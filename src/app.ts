@@ -29,10 +29,10 @@ export const createApp = () => {
     app.use('/api/films', createRouter.createFilmRouter());
 
     // Not found & not method
-    app.get('*', errorManager.notFoundController());
-    app.use('*', errorManager.notMethodController());
+    app.get('*', errorManager.notFoundController.bind(errorManager));
+    app.use('*', errorManager.notMethodController.bind(errorManager));
 
-    app.use(errorManager.errorController());
+    app.use(errorManager.errorController.bind(errorManager));
 
     return app;
 };

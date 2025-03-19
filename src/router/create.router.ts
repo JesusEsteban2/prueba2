@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { FilmsController } from '../controllers/film.controller.js';
-import { FilmPrismaRepo } from '../repos/filmsrepository.js';
+import { FilmPrismaRepo } from '../repos/films.repository.js';
 //import { AuthInterceptor } from '../middleware/auth.interceptor.js';
 //import { Role } from '@prisma/client';
 //import { UserRepository } from '../repos/users.repo.js';

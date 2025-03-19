@@ -1,15 +1,15 @@
 import { NextFunction, Request, Response } from 'express';
-// import { Film } from '@prisma/client';
-import { Repository } from '../repos/repositorytype.js';
-import { AppResponse } from '../middleware/responseJson.js';
-import { FilmCreateDTO } from '../DTO/films.dto.js';
+import { Film } from '@prisma/client';
+import { Repository } from '../repos/repository.type.js';
+import { AppResponse } from '../middleware/response.json.js';
+import { FilmCreateDTO } from '../dto/films.dto.js';
 
 export class FilmsController {
     constructor(private repoFilms: Repository<Film>) {}
 
     async getAll(req: Request, res: Response, next: NextFunction) {
         try {
-            const films = await this.repoFilms.read();
+            const films = await this.repoFilms.getAll();
             const data: AppResponse<Film> = {
                 data: films,
                 error: '',
@@ -24,7 +24,7 @@ export class FilmsController {
         console.log('getById');
         try {
             const { id } = req.params;
-            const films = await this.repoFilms.readById(id);
+            const films = await this.repoFilms.getById(id);
             const data: AppResponse<Film> = {
                 data: [films],
                 error: '',
