@@ -4,15 +4,15 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "start": "node dist/index.js",
-        "start:dev": "cross-env NODE_ENV=dev DEBUG=films* node --watch --env-file=.env ./dist/index.js",
-        "config": "cross-env NODE_ENV=dev DEBUG=films* node --env-file=.env ./dist/config.js",
+        "start": "node ./dist/index.js",
         "build": "tsc -w",
-        "test": "vitest run",
+        "test": "vitest --watch",
         "test:c": "vitest run --coverage",
         "lint": "eslint . --ext .ts"
     },
-    "keywords": ["testing"],
+    "keywords": [
+        "testing"
+    ],
     "author": "Jesus Esteban",
     "license": "ISC",
     "description": "Testing",
@@ -23,10 +23,10 @@
         "@eslint/js": "^9.22.0",
         "@types/debug": "^4.1.12",
         "@types/node": "^22.13.5",
-        "typescript-eslint": "8.26.1",
         "eslint": "^9.21.0",
         "prettier": "^3.5.2",
-        "typescript": "^5.8.2"
-    },
-    "dependencies": {}
+        "typescript": "^5.8.2",
+        "typescript-eslint": "8.26.1",
+        "vitest": "^3.0.9"
+    }
 }
