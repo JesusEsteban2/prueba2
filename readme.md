@@ -10,3 +10,7 @@ Elementos básicos de Test.
 - test o it: Test unitario (Alias).
 - expect: Asercion.
 - to ...: Matcher
+
+Coverage: Indica que el código ha pasado por todas las líneas que lo componen.
+
+Mock en: Mockea y Espía.
