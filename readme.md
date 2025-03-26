@@ -14,3 +14,13 @@ Elementos básicos de Test.
 Coverage: Indica que el código ha pasado por todas las líneas que lo componen.
 
 Mock en: Mockea y Espía.
+
+describe('Given......', () => {
+describe('When ...', () => {
+test('Then ......', () => {
+// Arrange
+// Act
+// Assert
+});
+});
+});
